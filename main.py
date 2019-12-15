@@ -1,4 +1,6 @@
-list = ['Minsk', 'Grodno', 'Brest', 'Vitebsk', 'Gomel']
+import duplicate as dup
+
+list = ['Minsk', 'Grodno', 'Brest', 'Vitebsk', 'Gomel', 'Gomel']
 
 user = 'o'
 
@@ -8,6 +10,7 @@ q - quit
 w - write
 d - delete
 p - print
+x - check duplicate
 	''')
 
 	if user == 'w':
@@ -19,3 +22,12 @@ p - print
 	elif user == 'p':
 		for x in list:
 			print (x)
+	elif user == 'x':
+		result = dup.checkIfDuplicates_1(list)
+		if result:
+			print('Yes, list contains duplicates')
+		else:
+			print('No duplicates found in list')   
+		
+
+
